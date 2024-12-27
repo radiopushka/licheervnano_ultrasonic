@@ -1,4 +1,4 @@
-# researching ultraonic data transmission using the Lichee RV Nano chipset
+# Researching ultraonic data transmission using the Lichee RV Nano chipset
 - research regarding ultrasonic communication air and water
 # full package
 - due to the required RISCV alsa library required for this to run. I am not able to upload the whole thing to github. It has a symbolic link which even trips up scp.
