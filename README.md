@@ -14,3 +14,4 @@
 - my hopes for the future of this is to make a duplex underwater link. For example, I can check my email while sitting at the bottom of the ocean in my submarine.
 - another idea i have is to make kind of like an underwater GPS system where there are beacons that send a code and the sub can measure the distance to the beacon knowing the timestamps and speed of sound underwater. (very inaccurate)
 - It is easy to send voice and music on multiple frequencies using ultrasound. you can check out the ultrasonic toolkit project in my repositories.
+- I could send a 6 digit code from about 2.5 meters away using my phone's speaker in my room.
