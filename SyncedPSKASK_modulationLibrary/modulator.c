@@ -82,9 +82,8 @@ void init_modulation_scheme(int samplerate, int bits,  float startfreq,int lowpa
   rblk=14000/(period_samples);
 }
 
-void prepare_array(short* data, int size,double gain){
+void prepare_array(short* data, int size,float gain){
   short* dend=data+size;
-  double temp;
   short* dst = data;
   int i;
   for(i=0;i<filterc;i++){
@@ -281,6 +280,7 @@ long demod(short* targ_array, unsigned int* array_itterator,int array_size,int s
     if(clock>=periodv){
       if(shifts<bp){
         value=(*targ_array)*(phase);
+        //printf("%d ",value);
 
         if(abs(*targ_array)<sq){
           

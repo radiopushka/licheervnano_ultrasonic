@@ -40,20 +40,18 @@ int checkchar_loop(int input){
 
 }
  //PID gain control
-  int previous_error=0;
-  int error_over=0; 
   double gaincont = 1;
 
 void receive_signal(short* frame, int size, int framegain){
     aread(frame,size);
-    int error,mval;
+    float error,mval;
     demod_carrier(frame,size);
     de_sample(frame,size,8);
     prepare_array(frame,size,gaincont);
     //printf("\n gain; %g\n",gaincont);
     
     mval=getmaxval(frame,size);
-    error=(framegain/2)-mval;
+    error=(framegain>>1)-mval;
     //printf("%d\n",mval);
 
   /*
@@ -77,8 +75,6 @@ void receive_signal(short* frame, int size, int framegain){
   }
 
 
-  error_over=(error_over+error)/2;
-    previous_error=error;
 
 }
 
@@ -233,7 +229,7 @@ int main(int argn, char* argv[]){
 
   int msgrx=0;
 
-  int framegain=15000;
+  int framegain=10000;
   int sqg=framegain/2;
 
 
